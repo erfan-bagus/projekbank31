@@ -21,7 +21,7 @@ class maincontroller extends Controller
 
       $beritaatas = berita::where('kategori',"berita")->paginate(3);
       $beritabawah = berita::where('kategori',"Pengumuman")->paginate(8);
-        return view('pages.beranda', ['beritaatas' => $beritaatas,'beritabawah' => $beritabawah]);
+        return view('pages.front.beranda', ['beritaatas' => $beritaatas,'beritabawah' => $beritabawah]);
     }
 
     public function beranda1()
@@ -34,17 +34,17 @@ class maincontroller extends Controller
 
     public function tentangkami()
     {
-        return view('tentangkami');
+        return view('pages.front.tentangkami');
     }
 
     public function profil()
     {
-        return view('profil');
+        return view('pages.front.profil');
     }
 
     public function hubunganinvestor()
     {
-        return view('hubunganinvestor');
+        return view('pages.front.hubunganinvestor');
     }
 
     public function laporankeuangan()
@@ -52,7 +52,7 @@ class maincontroller extends Controller
 
       $laporan = filepdf::where('kategori',"laporankeuangan")->paginate(9);
 
-        return view('laporankeuangan', ['laporan' => $laporan]);
+        return view('pages.front.laporankeuangan', ['laporan' => $laporan]);
     }
 
     public function laporantahunan()
@@ -60,7 +60,7 @@ class maincontroller extends Controller
 
       $laporan = filepdf::where('kategori',"laporantahunan")->paginate(9);
 
-        return view('laporantahunan', ['laporan' => $laporan]);
+        return view('pages.front.laporantahunan', ['laporan' => $laporan]);
     }
 
     public function laporancgc()
@@ -68,32 +68,32 @@ class maincontroller extends Controller
 
       $laporan = filepdf::where('kategori',"laporancgc")->paginate(9);
 
-        return view('laporancgc', ['laporan' => $laporan]);
+        return view('pages.front.laporancgc', ['laporan' => $laporan]);
     }
 
     public function manajemen()
     {
-        return view('manajemen');
+        return view('pages.front.manajemen');
     }
 
     public function dewankomisaris()
     {
-        return view('dewankomisaris');
+        return view('pages.front.dewankomisaris');
     }
 
     public function direksi()
     {
-        return view('direksi');
+        return view('pages.front.direksi');
     }
 
     public function kepaladivisi()
     {
-        return view('kepaladivisi');
+        return view('pages.front.kepaladivisi');
     }
 
     public function pimpinancabang()
     {
-        return view('pimpinancabang');
+        return view('pages.front.pimpinancabang');
     }
 
     public function simulasi()
@@ -104,7 +104,7 @@ class maincontroller extends Controller
       $jangka = 0;
       $a = 0;
       $b = 0;
-        return view('simulasi', ['total' => $total,'pinjaman' => $pinjaman,'bunga' => $bunga,'jangka' => $jangka, 'a' =>$a, 'b' => $b]);
+        return view('pages.front.simulasi', ['total' => $total,'pinjaman' => $pinjaman,'bunga' => $bunga,'jangka' => $jangka, 'a' =>$a, 'b' => $b]);
     }
 
     public function simulasihitung(Request $request)
@@ -119,7 +119,7 @@ class maincontroller extends Controller
     $b = $pinjaman / $jangka;
 
       $total = ($pinjaman/$jangka)+(($pinjaman*$bunga)/100);
-        return view('simulasi', ['total' => $total,'pinjaman' => $pinjaman,'bunga' => $bunga,'jangka' => $jangka, 'a' =>$a, 'b' => $b]);
+        return view('pages.front.simulasi', ['total' => $total,'pinjaman' => $pinjaman,'bunga' => $bunga,'jangka' => $jangka, 'a' =>$a, 'b' => $b]);
     }
 
 
@@ -128,72 +128,72 @@ class maincontroller extends Controller
 
     public function layanan()
     {
-        return view('layanan');
+        return view('pages.front.layanan');
     }
     public function kredit()
     {
-        return view('kredit');
+        return view('pages.front.kredit');
     }
     public function kreditcerahinkusif()
     {
-        return view('kreditcerahinkusif');
+        return view('pages.front.kreditcerahinkusif');
     }
     public function kreditmultiguna()
     {
-        return view('kreditmultiguna');
+        return view('pages.front.kreditmultiguna');
     }
     public function tabungan()
     {
-        return view('tabungan');
+        return view('pages.front.tabungan');
     }
     public function tabunganumumparama()
     {
-        return view('tabunganumumparama');
+        return view('pages.front.tabunganumumparama');
     }
     public function tabungancitraparama4()
     {
-        return view('tabungancitraparama4');
+        return view('pages.front.tabungancitraparama4');
     }
     public function tabunganarjuna11()
     {
-        return view('tabunganarjuna11');
+        return view('pages.front.tabunganarjuna11');
     }
     public function tabunganku()
     {
-        return view('tabunganku');
+        return view('pages.front.tabunganku');
     }
     public function tabunganarjuna12()
     {
-        return view('tabunganarjuna12');
+        return view('pages.front.tabunganarjuna12');
     }
     public function tabunganharirayaqurmatasya()
     {
-        return view('tabunganharirayaqurmatasya');
+        return view('pages.front.tabunganharirayaqurmatasya');
     }
     public function tabungansimpel()
     {
-        return view('tabungansimpel');
+        return view('pages.front.tabungansimpel');
     }
     public function tabunganarjuna13()
     {
-        return view('tabunganarjuna13');
+        return view('pages.front.tabunganarjuna13');
     }
     public function deposito()
     {
-        return view('deposito');
+        return view('pages.front.deposito');
     }
     public function beritalainnya()
     {
       $file = berita::where('kategori',"berita")->paginate(9);
 
-        return view('beritalainnya', ['file' => $file]);
+        return view('pages.front.beritalainnya', ['file' => $file]);
     }
 
     public function pengumumanlainnya()
     {
       $file = berita::where('kategori',"pengumuman")->paginate(9);
 
-        return view('pengumumanlainnya', ['file' => $file]);
+        return view('pages.front.pengumumanlainnya', ['file' => $file]);
     }
 
     public function berita($id)
@@ -202,7 +202,7 @@ class maincontroller extends Controller
       $beritaatas = berita::where('kategori',"berita")->paginate(3);
       $beritabawah = berita::where('kategori',"Pengumuman")->paginate(8);
 
-        return view('berita', ['file' => $file, 'beritaatas' => $beritaatas,'beritabawah' => $beritabawah]);
+        return view('pages.front.berita', ['file' => $file, 'beritaatas' => $beritaatas,'beritabawah' => $beritabawah]);
     }
 
     public function pengumuman($id)
@@ -212,7 +212,7 @@ class maincontroller extends Controller
       $beritabawah = berita::where('kategori',"Pengumuman")->paginate(8);
 
 
-        return view('pengumuman', ['file' => $file, 'beritaatas' => $beritaatas,'beritabawah' => $beritabawah]);
+        return view('pages.front.pengumuman', ['file' => $file, 'beritaatas' => $beritaatas,'beritabawah' => $beritabawah]);
     }
 
     public function aksicari(Request $request)
@@ -232,19 +232,19 @@ class maincontroller extends Controller
                 ->get();
 
 
-        return view('hasilcari', ['files' => $files, 'beritaatas' => $beritaatas,'beritabawah' => $beritabawah]);
+        return view('pages.front.hasilcari', ['files' => $files, 'beritaatas' => $beritaatas,'beritabawah' => $beritabawah]);
     }
 
     public function karir()
     {
       $notifikasi = 'SILAHKAN UPLOAD LAMARAN!!!';
       $file = filepdf::where('kategori',"lamaran")->get();
-        return view('karir', ['notifikasi' => $notifikasi,'file' => $file]);
+        return view('pages.front.karir', ['notifikasi' => $notifikasi,'file' => $file]);
     }
 
     public function kontakkami()
     {
-        return view('kontakkami');
+        return view('pages.front.kontakkami');
     }
 
 
@@ -252,7 +252,7 @@ class maincontroller extends Controller
     //ADMIN
     public function adminlogin()
     {
-        return view('adminlogin');
+        return view('pages.back.adminlogin');
     }
     public function loginaksi(Request $request)
     {
@@ -304,7 +304,7 @@ class maincontroller extends Controller
       $file = filepdf::where('kategori',"lamaran")->paginate(10);
 
 
-      return view('adminpage', ['lamaran' => $lamaran,'file' => $file, 'admins' => $admins,'berita' => $berita,'pengumuman' => $pengumuman,'tahunan' => $tahunan,'keuangan' => $keuangan,'cgc' => $cgc,]);
+      return view('pages.back.adminpage', ['lamaran' => $lamaran,'file' => $file, 'admins' => $admins,'berita' => $berita,'pengumuman' => $pengumuman,'tahunan' => $tahunan,'keuangan' => $keuangan,'cgc' => $cgc,]);
     }
 
     public function adminaturpassword()
@@ -313,7 +313,7 @@ class maincontroller extends Controller
       if (admin::where('nama',$session)->count() < 1) {
         return redirect('adminlogin');
       }
-      return view('admingantipassword');
+      return view('pages.back.admingantipassword');
     }
     public function aksiaturpassword(Request $request)
     {
@@ -345,7 +345,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
       $file = DB::table('filepdf')->paginate(10);
-      return view('adminfile', ['file' => $file]);
+      return view('pages.back.adminfile', ['file' => $file]);
     }
 
     public function adminfileupload()
@@ -355,7 +355,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
 
-      return view('adminfileupload');
+      return view('pages.back.adminfileupload');
     }
 
     public function aksitambahfile(Request $request)
@@ -426,7 +426,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
       $file = filepdf::where('kategori',"laporankeuangan")->paginate(10);
-      return view('adminlaporankeuangan', ['file' => $file]);
+      return view('pages.back.adminlaporankeuangan', ['file' => $file]);
     }
 
     public function adminlaporankeuanganupload()
@@ -436,7 +436,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
 
-      return view('adminlaporankeuanganupload');
+      return view('pages.back.adminlaporankeuanganupload');
     }
 
     public function buatlaporankeuanganaksi(Request $request)
@@ -485,7 +485,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
       $file = filepdf::where('kategori',"laporantahunan")->paginate(10);
-      return view('adminlaporantahunan', ['file' => $file]);
+      return view('pages.back.adminlaporantahunan', ['file' => $file]);
     }
 
     public function adminlaporantahunanupload()
@@ -495,7 +495,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
 
-      return view('adminlaporantahunanupload');
+      return view('pages.back.adminlaporantahunanupload');
     }
 
     public function buatlaporantahunanaksi(Request $request)
@@ -544,7 +544,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
       $file = filepdf::where('kategori',"laporancgc")->paginate(10);
-      return view('adminlaporancgc', ['file' => $file]);
+      return view('pages.back.adminlaporancgc', ['file' => $file]);
     }
 
     public function adminlaporancgcupload()
@@ -554,7 +554,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
 
-      return view('adminlaporancgcupload');
+      return view('pages.back.adminlaporancgcupload');
     }
 
     public function buatlaporancgcaksi(Request $request)
@@ -642,7 +642,7 @@ class maincontroller extends Controller
       }
       $file = berita::where('kategori',"berita")->paginate(10);
       $no = 0;
-      return view('adminberita', ['file' => $file,'no' => $no]);
+      return view('pages.back.adminberita', ['file' => $file,'no' => $no]);
     }
 
     public function hapusberita($id)
@@ -661,7 +661,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
 
-      return view('adminberitabuat');
+      return view('pages.back.adminberitabuat');
     }
 
     public function buatberitaaksi(Request $request)
@@ -703,7 +703,7 @@ class maincontroller extends Controller
       }
       $file = berita::where('kategori',"pengumuman")->paginate(10);
       $no = 0;
-      return view('adminpengumuman', ['file' => $file,'no' => $no]);
+      return view('pages.back.adminpengumuman', ['file' => $file,'no' => $no]);
     }
 
     public function hapuspengumuman($id)
@@ -719,7 +719,7 @@ class maincontroller extends Controller
       $pengumuman = berita::find($id);
 
 
-      return view('admineditartikel', ['pengumuman' => $pengumuman]);
+      return view('pages.back.admineditartikel', ['pengumuman' => $pengumuman]);
     }
 
     public function editartikelaksi($id,Request $request)
@@ -740,7 +740,7 @@ class maincontroller extends Controller
         return redirect('adminlogin');
       }
 
-      return view('adminpengumumanbuat');
+      return view('pages.back.adminpengumumanbuat');
     }
 
     public function buatpengumumanaksi(Request $request)

@@ -389,16 +389,13 @@
             text-overflow: ellipsis;
             width: 100%;
         }
+        a{color: black}
     </style>
 </head>
 <body>
+@include('partials.front.header')
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top: 125px">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
         <div style="background-color:#fff;padding: 5px 5px 5px 5px">
@@ -421,92 +418,7 @@
 
 @yield('content')
 
-
-<footer>
-
-    <footer class="page-footer font-small special-color-dark pt-4">
-
-        <!-- Footer Elements -->
-        <div class="container-fluid" style="background-color:#c2c4ff">
-
-            <!-- Social buttons -->
-            <div>
-                <ul class="list-unstyled list-inline text-center">
-                    <li class="list-inline-item">
-
-                        <img class="card-img-top" src="{{ asset('image')}}/logo-ayo-ke-bank.png" alt="Card image cap"
-                             style=" padding-top: 10px">
-
-                    </li>
-                    <li class="list-inline-item">
-
-                        <img class="card-img-top" src="{{ asset('image')}}/LPS-Logo-Vector.png" alt="Card image cap"
-                             style=" padding-top: 10px">
-
-                    </li>
-                    <li class="list-inline-item">
-
-                        <img class="card-img-top" src="{{ asset('image')}}/ojk-logo.png" alt="Card image cap"
-                             style=" padding-top: 10px">
-
-                    </li>
-                </ul>
-            </div>
-            <!-- Social buttons -->
-
-        </div>
-        <!-- Footer Elements -->
-        <!-- Middle FOOTER -->
-        <div class="container-fluid" style="background-color:#191970">
-            <div class="container" style="background-color:#191970;down:20px">
-                <div class="col-sm-4">
-
-                    <p style="color:#fff; padding-top: 25px;  font-family: 'Raleway';">
-                        KANTOR PUSAT
-                        <br><br>
-                        Jl Pemuda No. 12</br>
-                        Muntilan Muntilan Magelang</br>
-                        Telp (0293) 586663, 587316 |</br> Fax. (0293) 587631
-                    </p>
-
-                </div>
-                <div class="col-sm-4">
-                    <p style="color:#fff; padding-top: 25px;  font-family: 'Raleway';">
-                        KONTAK KAMI</br>
-                        </br>
-                        <img src="{{ asset('image')}}/whatsapp.png" height="25" style=""> Call center 14022</br></br>
-                        <img src="{{ asset('image')}}/email.png" height="25" style=""> kembangparama@gmail.com </br>
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <p style="color:#fff; padding-top: 25px;  font-family: 'Raleway'; text-align:center">
-                        SOCIAL MEDIA</br>
-                        </br>
-                        <a href="https://twitter.com/"> <img src="{{ asset('image')}}/twitter.png" height="25"
-                                                             style="border-radius:50%"></a>
-                        <a href="https://www.facebook.com/"> <img src="{{ asset('image')}}/facebook.png" height="25"
-                                                                  style="border-radius:50%"></a>
-                        <a href="https://plus.google.com/?hl=id"> <img src="{{ asset('image')}}/g+.png" height="25"
-                                                                       style="border-radius:50%"></a>
-                        <a href="https://www.instagram.com/?hl=id"> <img src="{{ asset('image')}}/instag.png"
-                                                                         height="25" style="border-radius:50%"></a>
-                        <a href="https://www.youtube.com/"> <img src="{{ asset('image')}}/yutub.png" height="25"
-                                                                 style="border-radius:50%"></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- Middle FOOTER -->
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3" style="background-color:#01417d">
-            <p style="color:#fff;font-size: 10px;">Copyright ©2017 BPR KEMBANG PARAMA. All rights reserved.</p>
-        </div>
-        <!-- Copyright -->
-
-    </footer>
-    <!-- Footer -->
-</footer>
+@include('partials.front.footer')
 
 <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="card-img-top"
                                                                   src="{{ asset('image')}}/unnamed.png"
