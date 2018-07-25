@@ -1,0 +1,115 @@
+body{
+  background-image: url('../image/sbg.png');
+}
+header{
+  color: white;
+}
+.navbar {
+	background-color: #01417d;
+  width: 100%;
+}
+.navbar-nav .nav-item .nav-link{
+	color: white;
+}
+footer {
+  margin-top: 25px;
+}
+.footer-partnership{
+  background-color: #c2c4ff;
+}
+.footer-partnership ul{
+  padding: 15px;
+}
+.img-partnership{
+  padding: 24px;
+}
+.footer-menu{
+  background-color: #191970;
+}
+.footer-address{
+  color: white;
+}
+.footer-address > h5{
+  padding: 8px;
+  padding-left: 40px;
+}
+.footer-address > ul{
+  list-style-type: none;
+}
+.footer-address > ul > li{
+  padding: 4px;
+}
+.footer-contact{
+  color: white;
+}
+.footer-contact > h5{
+  padding: 8px;
+  padding-left: 40px;
+}
+.footer-contact > ul{
+  list-style-type: none;
+}
+.footer-contact > ul > li{
+  padding: 4px;
+}
+.footer-image-icon{
+  width: 25px;
+}
+.footer-social-media{
+  color: white;
+}
+.footer-social-media > h5{
+  padding: 8px;
+  padding-left: 40px;
+}
+.footer-social-media > ul{
+  list-style-type: none;
+  margin: 0 0 0 30px;
+  padding: 0;
+  overflow: hidden;
+}.footer-social-media > ul li{
+    float: left;
+    margin: 4px;
+}
+.footer-copyright{
+  background-color: #01417d;
+  height: 100%;
+}
+.footer-copyright p{
+  color: white;
+  font-size: 12px;
+  margin: 12px;
+  margin-left: 50px;
+}
+.homepage{
+  /*margin-top: 90px;*/
+}
+.homepage .full-img-features{
+  width: 100%;
+}
+.homepage .feature-content{
+  margin-top: 16px;
+}
+.content-title{
+  margin: 12px;
+}
+.feature-information{
+  margin-top: 24px;
+}
+.feature-information table  thead  tr{
+  color: #fff;
+  background-color: #01417d;
+}
+.button-homepage-more-news-bottom{
+  font-size: 10px;
+  margin: 24px;
+}
+.navbar-brand img{
+  height: 25px;
+}
+.owl-prev > span{
+  font-size: 70px;
+}
+.owl-next > span{
+  font-size: 70px;
+}
